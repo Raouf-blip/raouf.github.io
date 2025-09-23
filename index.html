@@ -1,15 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>League of Raouf</title>
+  <meta charset="UTF-8">
+  <title>Le Vieux Poulet</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #fff8e1;
+      color: #2c2c2c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 4rem;
+      margin: 2rem 0 1rem;
+      color: #ff0028;
+      text-shadow: -3px -3px #ffcc00, 3px 3px #000;
+      position: relative;
+      letter-spacing: 2px;
+    }
+
+    h1::after {
+      content: "🍗";
+      position: absolute;
+      right: -50px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px) rotate(-10deg); }
+    }
+
+    .slogan {
+      font-size: 1.3rem;
+      color: #ffcc00;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 0 #ff0028;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      width: 90%;
+      max-width: 1100px;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 3px solid #ffcc00;
+      box-shadow: 5px 5px 0 #ff0028;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) rotate(-2deg);
+      box-shadow: 8px 8px 0 #ffcc00;
+    }
+
+    .nickname {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #ff0028;
+      text-shadow: 1px 1px 0 #ffcc00;
+    }
+
+    .card a {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #fff;
+      background: linear-gradient(90deg, #ffcc00, #ff8800);
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.3s ease;
+      box-shadow: 2px 2px 0 #ff0028;
+    }
+
+    .card a:hover {
+      transform: scale(1.1) rotate(-2deg);
+      background: linear-gradient(90deg, #ff0028, #ff8800);
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #ff0028;
+      width: 100%;
+      text-shadow: 2px 2px 0 #000;
+      letter-spacing: 1px;
+    }
+
+    footer span {
+      color: #ffcc00;
+    }
+  </style>
 </head>
 <body>
-    <h1>Le Vieux Poulet</h1>
-    <p><a href="https://op.gg/fr/lol/summoners/euw/TheFool-JOK3R">Raouf</a></p>
-    <p><a href="https://op.gg/fr/lol/summoners/euw/Super%20Gooner-prout">Cyp</a></p>
-    <p><a href="https://op.gg/lol/summoners/euw/Fortnite-CHIBR">Ilan</a></p>
-    <p><a href="https://op.gg/lol/summoners/euw/GRM%20XeleriaZ-GRM">Esteban</a></p>
-    <p><a href="https://op.gg/lol/summoners/euw/NaasaX-8747">Marcelin</a></p>
+  <h1>Le Vieux Poulet</h1>
+  <p class="slogan">Menu Spécial League of Charlemagne</p>
+  <div class="cards">
+    <div class="card">
+      <p class="nickname">TheFool Combo</p>
+      <a href="https://op.gg/fr/lol/summoners/euw/TheFool-JOK3R" target="_blank">Raouf</a>
+    </div>
+    <div class="card">
+      <p class="nickname">Super Gooner Bucket</p>
+      <a href="https://op.gg/fr/lol/summoners/euw/Super%20Gooner-prout" target="_blank">Cyp</a>
+    </div>
+    <div class="card">
+      <p class="nickname">Fortnite Crispy</p>
+      <a href="https://op.gg/lol/summoners/euw/Fortnite-CHIBR" target="_blank">Ilan</a>
+    </div>
+    <div class="card">
+      <p class="nickname">XeleriaZ Spicy Wings</p>
+      <a href="https://op.gg/lol/summoners/euw/GRM%20XeleriaZ-GRM" target="_blank">Esteban</a>
+    </div>
+    <div class="card">
+      <p class="nickname">NaasaX Family Pack</p>
+      <a href="https://op.gg/lol/summoners/euw/NaasaX-8747" target="_blank">Marcelin</a>
+    </div>
+  </div>
+  <footer>
+    🍗 Finger lickin' <span>Le Vieux Poulet</span> — Since 2025 🍗
+  </footer>
 </body>
 </html>
